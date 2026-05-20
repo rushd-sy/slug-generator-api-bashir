@@ -3,6 +3,6 @@
     public class GenerateSlugRequest
     {
         public string Text { get; set; } = string.Empty;
-        public char Separator { get; set; } 
+        public char? Separator { get; set; } = null;
     }
 }

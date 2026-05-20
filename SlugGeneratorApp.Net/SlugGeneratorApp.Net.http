@@ -1,6 +1,10 @@
 @SlugGeneratorApp.Net_HostAddress = http://localhost:5279
 
-GET {{SlugGeneratorApp.Net_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{SlugGeneratorApp.Net_HostAddress}}/api/slugs
+Content-Type: application/json
 
+{
+  "text": "Hello World From Bashir",
+  "separator": "-"
+}
 ###
