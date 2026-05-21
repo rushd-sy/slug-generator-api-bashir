@@ -11,9 +11,9 @@ namespace SlugGeneratorApp.Net.Controllers
         [HttpPost]
         public ActionResult<GenerateSlugResponse> GenerateSlug([FromBody] GenerateSlugRequest request)
         {
-            if(request == null)
+            if(request == null || string.IsNullOrWhiteSpace(request.Text))
             {
-                return BadRequest("Request body is required.");
+                throw new SlugGenerationException("Title is required and cannot be empty.");
             }
             if (!ModelState.IsValid)
             {
