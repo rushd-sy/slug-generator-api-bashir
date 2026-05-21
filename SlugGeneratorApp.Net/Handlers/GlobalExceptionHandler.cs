@@ -24,7 +24,6 @@ namespace SlugGeneratorApp.Net.Handlers
             {
                 Status = (int)HttpStatusCode.InternalServerError,
                 Title = "Internal Server Error",
-                Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1",
                 Detail = "An unexpected error occurred. Our team has been notified."
             };
 
