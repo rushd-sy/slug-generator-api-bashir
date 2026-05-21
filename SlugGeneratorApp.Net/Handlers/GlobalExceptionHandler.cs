@@ -1,6 +1,6 @@
 ﻿namespace SlugGeneratorApp.Net.Handlers
 {
-    public class GlobalExceptionHandler
+    public class Class
     {
     }
 }

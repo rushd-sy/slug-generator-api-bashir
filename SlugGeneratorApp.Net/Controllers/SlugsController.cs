@@ -8,7 +8,7 @@ namespace SlugGeneratorApp.Net.Controllers
     public class SlugsController: ControllerBase
     {
         [HttpPost]
-        public ActionResult<string> GenerateSlug([FromBody] GenerateSlugRequest request)
+        public ActionResult<GenerateSlugResponse> GenerateSlug([FromBody] GenerateSlugRequest request)
         {
             var slug = SlugGenerator.SlugGenerator.GenerateSlug(request.Text, request.Separator='-');
             var response = new GenerateSlugResponse
