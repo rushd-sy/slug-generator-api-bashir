@@ -1,0 +1,10 @@
+@SlugGeneratorApp.Net_HostAddress = http://localhost:5279
+
+POST {{SlugGeneratorApp.Net_HostAddress}}/api/slugs
+Content-Type: application/json
+
+{
+  "text": "Hello World From Bashir",
+  "separator": "-"
+}
+###
