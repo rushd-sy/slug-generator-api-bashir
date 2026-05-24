@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SlugGeneratorApp.Net.DTOs;
 using SlugGenerator;
+using Asp.Versioning;
 namespace SlugGeneratorApp.Net.Controllers
-{
-    
+{ 
     [ApiController]
-    [Route("api/slugs")]
+    [ApiVersion("1.0")]
+    [Route("api/{version:apiVersion}/slugs")]
     public class SlugsController: ControllerBase
     {
         [HttpPost]
@@ -25,8 +26,6 @@ namespace SlugGeneratorApp.Net.Controllers
                 Slug = slug,
                 OriginalText = request.Text,
             };
-
-
             return Ok(response);
         }
 
