@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SlugGeneratorApp.Net.DTOs;
 using SlugGenerator;
+using Asp.Versioning.Routing;
+using Asp.Versioning;
 namespace SlugGeneratorApp.Net.Controllers
 {
     
     [ApiController]
-    [Route("api/slugs")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/slugs")]
     public class SlugsController: ControllerBase
     {
         [HttpPost]
